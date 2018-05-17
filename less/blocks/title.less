@@ -1,0 +1,30 @@
+.title {
+  position: relative;
+  color: @blue;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  text-align: center;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 365px;
+    height: 12px;
+    background-image: url(../img/wave.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.subtitle {
+  font-family: "Lifehack", "Arial", sans-serif;
+  color: #7d7d7d;
+  text-align: center;
+  font-size: 24px;
+}

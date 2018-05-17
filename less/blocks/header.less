@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgb(109, 140, 183);
+  border-bottom: 1px solid rgb(109, 140, 183);
+  background-color: rgba(109, 140, 183, 0.2);
+}
+
+.header__wrap {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-right: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e1e1e1;
+  letter-spacing: 0.01em;
+}
+
+.header__instagram {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  line-height: 22px;
+  
+  span {
+    display: block;
+    color: #00b9ee;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 39px;
+    height: 39px;
+    background-image: url(../img/icon-in.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.header__phone {
+  position: relative;
+  padding-left: 30px;
+  
+  span {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../img/icon-phone.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
