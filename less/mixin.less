@@ -3,13 +3,40 @@
   padding: 0;
 }
 
-.visually-hidden { 
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+@keyframes btn-hover {
+  0% {
+    background-image: linear-gradient(to top, rgb(255,187,0) 0%, rgb(254,225,64) 100%);
+  }
+  25% {
+    background-image: linear-gradient(to top, rgb(255,187,0) 25%, rgb(254,225,64) 100%);
+  }
+  50% {
+    background-image: linear-gradient(to top, rgb(255,187,0) 50%, rgb(254,225,64) 100%);
+  }
+  75% {
+    background-image: linear-gradient(to top, rgb(255,187,0) 75%, rgb(254,225,64) 100%);
+  }
+  100% {
+    background-image: none;
+    background-color: rgb(255,187,0);
+  }
+}
+
+@keyframes btnblue-hover {
+  0% {
+    background-image: linear-gradient(to top, rgb(109,140,183) 0%, rgb(130,172,231) 100%);
+  }
+  25% {
+    background-image: linear-gradient(to top, rgb(109,140,183) 25%, rgb(130,172,231) 100%);
+  }
+  50% {
+    background-image: linear-gradient(to top, rgb(109,140,183) 50%, rgb(130,172,231) 100%);
+  }
+  75% {
+    background-image: linear-gradient(to top, rgb(109,140,183) 75%, rgb(130,172,231) 100%);
+  }
+  100% {
+    background-image: none;
+    background-color: rgb(109,140,183);
+  }
 }

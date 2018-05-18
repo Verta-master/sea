@@ -6,6 +6,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  
+  .title {
+    margin-bottom: 20px;
+  }
+}
+
+.partners__slider {
+  margin-top: 42px;
 }
 
 .partners__slide {
@@ -19,6 +27,14 @@
   
   img {
     display: block;
+  }
+  
+  &:hover,
+  &:active {
+    .partners__title {
+      color: @yellow;
+      transition: ease-out 0.3s;
+    }
   }
 }
 
@@ -45,6 +61,7 @@
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 700;
+  transition: ease-out 0.3s;
 }
 
 .partners__prev,
