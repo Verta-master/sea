@@ -651,6 +651,7 @@ button {
   transition: ease-out 0.3s;
 }
 .title {
+  margin-top: 0;
   position: relative;
   color: #5b769c;
   font-size: 30px;
@@ -859,8 +860,19 @@ button {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#6d8cb7), to(#82ace7));
   background-image: linear-gradient(to top, #6d8cb7 0%, #82ace7 100%);
 }
+.btn--more {
+  width: 362px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #7091be;
+  font-size: 20px;
+  letter-spacing: 0.025em;
+  background-image: none;
+  border: 2px solid #7192c0;
+}
 .choice {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 .choice__info {
   margin-top: 35px;
@@ -1040,4 +1052,159 @@ button {
   border-radius: 0;
   font-size: 20px;
   letter-spacing: 0.025em;
+}
+.choice__date {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: 0.01em;
+}
+.choice__date span {
+  color: #ffbb00;
+}
+.choice__comment {
+  color: #e1e1e1;
+  font-size: 18px;
+}
+.team {
+  padding-top: 45px;
+  background-image: url(../img/bg-team.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.team__list {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.team__item {
+  width: 265px;
+  margin-right: 30px;
+  margin-bottom: 45px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: center;
+  color: #4f5362;
+}
+.team__item:nth-child(4n) {
+  margin-right: 0;
+}
+.team__img {
+  width: 90px;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team__person {
+  margin-bottom: 10px;
+}
+.team__position {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: #a8acb9;
+}
+.partners {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(../img/bg-anounce.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.partners__slide {
+  width: 265px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+.partners__slide img {
+  display: block;
+}
+.partners__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+  color: #fff;
+  background-color: rgba(31, 38, 48, 0.3);
+  background-image: url(../img/overlay.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.partners__title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.partners__prev,
+.partners__next {
+  top: 60%;
+  outline: none;
+  background-image: url(../img/icon-right.png);
+  background-size: 18px 30px;
+}
+.partners__prev {
+  left: calc(50% - 605px);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.partners__next {
+  right: calc(50% - 605px);
 }
