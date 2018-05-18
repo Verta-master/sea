@@ -402,15 +402,93 @@ textarea {
   margin: 0;
   padding: 0;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+@-webkit-keyframes btn-hover {
+  0% {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#ffbb00), to(#fee140));
+    background-image: linear-gradient(to top, #ffbb00 0%, #fee140 100%);
+  }
+  25% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #ffbb00), to(#fee140));
+    background-image: linear-gradient(to top, #ffbb00 25%, #fee140 100%);
+  }
+  50% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffbb00), to(#fee140));
+    background-image: linear-gradient(to top, #ffbb00 50%, #fee140 100%);
+  }
+  75% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #ffbb00), to(#fee140));
+    background-image: linear-gradient(to top, #ffbb00 75%, #fee140 100%);
+  }
+  100% {
+    background-image: none;
+    background-color: #ffbb00;
+  }
+}
+@keyframes btn-hover {
+  0% {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#ffbb00), to(#fee140));
+    background-image: linear-gradient(to top, #ffbb00 0%, #fee140 100%);
+  }
+  25% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #ffbb00), to(#fee140));
+    background-image: linear-gradient(to top, #ffbb00 25%, #fee140 100%);
+  }
+  50% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffbb00), to(#fee140));
+    background-image: linear-gradient(to top, #ffbb00 50%, #fee140 100%);
+  }
+  75% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #ffbb00), to(#fee140));
+    background-image: linear-gradient(to top, #ffbb00 75%, #fee140 100%);
+  }
+  100% {
+    background-image: none;
+    background-color: #ffbb00;
+  }
+}
+@-webkit-keyframes btnblue-hover {
+  0% {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#6d8cb7), to(#82ace7));
+    background-image: linear-gradient(to top, #6d8cb7 0%, #82ace7 100%);
+  }
+  25% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #6d8cb7), to(#82ace7));
+    background-image: linear-gradient(to top, #6d8cb7 25%, #82ace7 100%);
+  }
+  50% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #6d8cb7), to(#82ace7));
+    background-image: linear-gradient(to top, #6d8cb7 50%, #82ace7 100%);
+  }
+  75% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #6d8cb7), to(#82ace7));
+    background-image: linear-gradient(to top, #6d8cb7 75%, #82ace7 100%);
+  }
+  100% {
+    background-image: none;
+    background-color: #6d8cb7;
+  }
+}
+@keyframes btnblue-hover {
+  0% {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#6d8cb7), to(#82ace7));
+    background-image: linear-gradient(to top, #6d8cb7 0%, #82ace7 100%);
+  }
+  25% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #6d8cb7), to(#82ace7));
+    background-image: linear-gradient(to top, #6d8cb7 25%, #82ace7 100%);
+  }
+  50% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #6d8cb7), to(#82ace7));
+    background-image: linear-gradient(to top, #6d8cb7 50%, #82ace7 100%);
+  }
+  75% {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #6d8cb7), to(#82ace7));
+    background-image: linear-gradient(to top, #6d8cb7 75%, #82ace7 100%);
+  }
+  100% {
+    background-image: none;
+    background-color: #6d8cb7;
+  }
 }
 body {
   font-family: "Proxima Nova", "Arial", sans-serif;
@@ -478,7 +556,7 @@ button {
 }
 .promo {
   min-height: 798px;
-  padding-top: 200px;
+  padding-top: 235px;
   color: #fff;
   text-align: center;
   background-color: #495b67;
@@ -488,8 +566,9 @@ button {
   background-position: center;
 }
 .promo__title {
-  margin-bottom: 20px;
-  font-size: 49px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 46px;
   line-height: 1.2;
   font-weight: 900;
   letter-spacing: 0.025em;
@@ -499,11 +578,11 @@ button {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   position: relative;
   font-family: "Lifehack", "Arial", sans-serif;
   font-size: 50px;
-  line-height: 1.2;
+  line-height: 1;
   font-weight: 400;
   letter-spacing: 0.025em;
 }
@@ -532,9 +611,16 @@ button {
   border-top: 1px solid #6d8cb7;
   border-bottom: 1px solid #6d8cb7;
   background-color: rgba(109, 140, 183, 0.2);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.header--scroll {
+  background-color: rgba(109, 140, 183, 0.8);
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .header__wrap {
-  padding-top: 13px;
+  padding-top: 10px;
   padding-bottom: 13px;
   padding-right: 85px;
   display: -webkit-box;
@@ -560,6 +646,8 @@ button {
   color: #00b9ee;
   font-size: 18px;
   font-weight: 700;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .header__instagram::before {
   content: "";
@@ -574,9 +662,17 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.header__instagram:hover span,
+.header__instagram:active span {
+  color: #ffbb00;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
 .header__phone {
   position: relative;
   padding-left: 30px;
+  margin-right: 20px;
+  line-height: 1;
 }
 .header__phone span {
   display: block;
@@ -608,7 +704,7 @@ button {
 }
 .menu {
   position: absolute;
-  top: 130px;
+  top: 140px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -654,7 +750,7 @@ button {
   margin-top: 0;
   position: relative;
   color: #5b769c;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.075em;
@@ -684,7 +780,8 @@ button {
   width: 1300px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -265px;
+  margin-top: -295px;
+  margin-bottom: 30px;
 }
 .ui-widget-header {
   border: none;
@@ -720,16 +817,19 @@ button {
   color: #fff;
 }
 .ui-tabs .ui-tabs-panel {
-  min-height: 300px;
-  padding-top: 35px;
-  padding-bottom: 60px;
-  padding-left: 75px;
-  padding-right: 75px;
+  min-height: 272px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 73px;
+  padding-right: 73px;
   border-radius: 10px;
   border: 1px solid #fff;
   -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
   background-color: #fff;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  padding: 15px 26px;
 }
 .order {
   display: -webkit-box;
@@ -746,7 +846,7 @@ button {
 }
 .order__field {
   margin-right: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 0;
   border: none;
   position: relative;
@@ -756,7 +856,7 @@ button {
 }
 .order__field span {
   position: absolute;
-  bottom: -10px;
+  bottom: -5px;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   left: 0;
@@ -769,14 +869,15 @@ button {
 }
 .order__label {
   display: block;
+  margin-bottom: 5px;
   color: #6d8cb7;
   font-weight: 300;
 }
 .order__select,
 .order__input {
   display: block;
-  width: 263px;
-  height: 48px;
+  width: 265px;
+  height: 50px;
   padding: 0 20px;
   color: #000;
   border-radius: 10px;
@@ -804,7 +905,7 @@ button {
           appearance: none;
   background-image: url(../img/icon-down.png);
   background-repeat: no-repeat;
-  background-position: 93% 16px;
+  background-position: 91% 18px;
   background-size: 16px 10px;
   outline: none;
   cursor: pointer;
@@ -821,7 +922,7 @@ button {
   background-image: url(../img/icon-calendar.png);
   background-repeat: no-repeat;
   background-size: 16px 16px;
-  background-position: 93% 16px;
+  background-position: 90% 16px;
 }
 #ui-datepicker-div {
   width: 263px;
@@ -829,6 +930,10 @@ button {
   background-color: #fff;
   border-radius: 10px;
   border: 1px solid #d7d7d7;
+}
+.order__btn {
+  font-family: "Proxima Nova", "Arial", sans-serif !important;
+  font-size: 24px !important;
 }
 .btn {
   width: 265px;
@@ -850,18 +955,29 @@ button {
   border-radius: 10px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#ffbb00), to(#fee140));
   background-image: linear-gradient(to top, #ffbb00 0%, #fee140 100%);
-  -webkit-transition: ease-out 0.3s;
-  transition: ease-out 0.3s;
 }
 .btn:hover,
 .btn:active {
-  -webkit-transition: ease-out 0.3s;
-  transition: ease-out 0.3s;
+  -webkit-animation-name: btn-hover;
+          animation-name: btn-hover;
+  -webkit-animation-duration: 0.1s;
+          animation-duration: 0.1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .btn--blue {
   color: #fff;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#6d8cb7), to(#82ace7));
   background-image: linear-gradient(to top, #6d8cb7 0%, #82ace7 100%);
+}
+.btn--blue:hover,
+.btn--blue:active {
+  -webkit-animation-name: btnblue-hover;
+          animation-name: btnblue-hover;
+  -webkit-animation-duration: 0.1s;
+          animation-duration: 0.1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .btn--more {
   width: 362px;
@@ -872,10 +988,28 @@ button {
   letter-spacing: 0.025em;
   background-image: none;
   border: 2px solid #7192c0;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.btn--more:hover,
+.btn--more:active {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-box-shadow: inset 0 0 15px 0px #7192c0;
+          box-shadow: inset 0 0 15px 0px #7192c0;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .choice {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.choice--anounce .title {
+  margin-bottom: 20px;
+}
+.choice--anounce .choice__list {
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 .choice__info {
   margin-top: 35px;
@@ -884,7 +1018,7 @@ button {
   color: #313131;
 }
 .choice__menu {
-  margin-top: 40px;
+  margin-top: 45px;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -905,7 +1039,7 @@ button {
 }
 .choice__item a {
   display: block;
-  padding: 15px 8px;
+  padding: 12px 8px;
   letter-spacing: 0.025em;
 }
 .choice__item:first-child {
@@ -913,7 +1047,7 @@ button {
   border-radius: 10px 0 0 10px;
 }
 .choice__item:last-child {
-  padding-right: 12px;
+  padding-right: 15px;
   border-radius: 0 10px 10px 0;
 }
 .choice__item:hover,
@@ -929,6 +1063,7 @@ button {
   transition: ease-out 0.3s;
 }
 .choice__list {
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -947,7 +1082,7 @@ button {
   position: relative;
   width: 363px;
   margin-right: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   overflow: hidden;
   border-radius: 0 0 10px 10px;
   background-color: #ffffff;
@@ -1063,6 +1198,7 @@ button {
   margin: 0;
   font-size: 21px;
   letter-spacing: 0.01em;
+  font-weight: 700;
 }
 .choice__date span {
   color: #ffbb00;
@@ -1073,13 +1209,14 @@ button {
 }
 .team {
   padding-top: 45px;
+  padding-bottom: 5px;
   background-image: url(../img/bg-team.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .team__list {
-  margin-top: 35px;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1099,6 +1236,8 @@ button {
   margin-right: 30px;
   margin-bottom: 45px;
   padding: 25px;
+  padding-top: 35px;
+  padding-bottom: 15px;
   border-radius: 10px;
   background-color: #ffffff;
   overflow: hidden;
@@ -1126,11 +1265,13 @@ button {
   overflow: hidden;
 }
 .team__person {
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 .team__position {
+  display: block;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -1144,6 +1285,12 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.partners .title {
+  margin-bottom: 20px;
+}
+.partners__slider {
+  margin-top: 42px;
 }
 .partners__slide {
   width: 265px;
@@ -1163,6 +1310,12 @@ button {
 }
 .partners__slide img {
   display: block;
+}
+.partners__slide:hover .partners__title,
+.partners__slide:active .partners__title {
+  color: #ffbb00;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .partners__overlay {
   position: absolute;
@@ -1195,6 +1348,8 @@ button {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 700;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .partners__prev,
 .partners__next {
@@ -1212,8 +1367,8 @@ button {
   right: calc(50% - 605px);
 }
 .consulting {
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 55px;
+  padding-bottom: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1224,12 +1379,15 @@ button {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.consulting .subtitle {
+  margin-bottom: 15px;
+}
 .consulting__title {
   width: 560px;
 }
 .consulting__order {
   width: 560px;
-  padding: 25px;
+  padding: 30px;
   background-image: url(../img/bg-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1248,11 +1406,10 @@ button {
 .consulting__form .order__select {
   width: 100%;
 }
-.consulting__form .order__field {
-  margin-bottom: 40px;
-}
 .consulting__btn {
   width: 100%;
+  margin-top: 40px;
+  font-size: 21px;
 }
 .footer {
   background-color: #2c2c2c;
@@ -1269,7 +1426,7 @@ button {
 .footer__bottom p {
   margin: 0;
   font-size: 14px;
-  line-height: 35px;
+  line-height: 30px;
   color: #e1e1e1;
 }
 .footer__bottom a {
@@ -1281,8 +1438,8 @@ button {
   text-decoration: none;
 }
 .footer__wrap {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 22px;
+  padding-bottom: 7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1298,7 +1455,7 @@ button {
 }
 .footer__menu {
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1355,8 +1512,12 @@ button {
 }
 .footer__call {
   width: 223px;
+  margin-top: 10px;
   font-size: 21px;
   letter-spacing: 0.025em;
+}
+.social p {
+  margin-bottom: 10px;
 }
 .social__list {
   display: -webkit-box;
