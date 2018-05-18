@@ -116,6 +116,8 @@
     background-size: contain;
   }
   .menu {
+    z-index: 10;
+    
     &--opened {
       .menu__btn {
         background-image: url(../img/icon-menu-cross.svg);
@@ -126,7 +128,6 @@
   .menu__list {
     display: none;
     position: absolute;
-    z-index: 100;
     top: 100%;
     left: 0;
     width: 100vw;
@@ -192,6 +193,9 @@
   .ui-tabs .ui-tabs-nav {
     padding: 0;
   }
+  .ui-tabs .ui-tabs-panel {
+    border-radius: 0 10px 10px 10px;
+  }
 }
 
 //-----------------------------
@@ -251,9 +255,6 @@
   }
   .ui-tabs .ui-tabs-nav li a {
     font-size: 16px;
-  }
-  .ui-tabs .ui-tabs-nav li {
-    border-radius: 10px;
   }
   .title::after {
     max-width: 100%;
