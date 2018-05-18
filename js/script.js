@@ -4,6 +4,11 @@ $('.menu__btn').click(function() {
   $('.menu__list').slideToggle();
 })
 
+$('.footer__btn').click(function() {
+  $('.footer__nav').toggleClass('footer__nav--opened');
+  $('.footer__menu').slideToggle();
+})
+
 //Header
 $(window).scroll(function(){
   if ((window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop) >= 100) {
