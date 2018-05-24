@@ -1,0 +1,51 @@
+.modal {
+  width: 400px;
+  max-width: 100%;
+  padding: 0;
+  padding-top: 30px;
+  
+  .consulting__form {
+    padding: 30px;
+    box-shadow: none;
+  }
+}
+
+.modal__check {
+  display: none;
+}
+
+.modal__label {
+  padding-left: 30px;
+  position: relative;
+  color: #6d8cb7;
+  font-weight: 300;
+  cursor: pointer;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid @blue;
+  }
+  
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 2px;
+    width: 16px;
+    height: 10px;
+    background-image: url(../img/icon-down.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.modal__check:checked + label::after {
+  display: block;
+}
