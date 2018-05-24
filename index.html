@@ -6,6 +6,7 @@
   <title>Жить на море</title>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -652,7 +653,7 @@
           <p>Наши телефоны:</p>
           <a href="tel:+79384603000">7 (938) 460 3000</a>
         </div>
-        <a href="#" class="btn footer__call">Обратный звонок</a>
+        <a data-fancybox data-src="#call" href="javascript:;" class="btn footer__call">Обратный звонок</a>
       </div>
     </div>
     <div class="footer__bottom">
@@ -662,10 +663,33 @@
     </div>
   </footer>
   
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="title">Заказать звонок</p>
+    <form action="#" method="post" class="consulting__form">
+      <fieldset class="order__field">
+        <label for="name3" class="order__label">Ваше имя</label>
+        <input type="text" name="name" id="name3" class="order__input">
+      </fieldset>
+      <fieldset class="order__field">
+        <label for="email3" class="order__label">Ваш email</label>
+        <input type="email" name="email" id="email3" class="order__input">
+      </fieldset>
+      <fieldset class="order__field">
+        <label for="phone3" class="order__label">Ваш телефон</label>
+        <input type="tel" name="phone" id="phone3" class="order__input" placeholder="+ 7 (___) - ___ - __ - __">
+      </fieldset>
+      <input type="checkbox" name="check" id="check" class="modal__check">
+      <label for="check" class="modal__label">Я не робот</label>
+      <button type="submit" class="btn consulting__btn">Заказать</button>
+    </form>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
 
   <!-- Sliders -->
   <script>
